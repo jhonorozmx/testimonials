@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 40px;
+        background-color: #fff;
+        color: #444;
+        font: 2em Sansita, sans-serif;
+      }
+
+      .wrapper {
+        display: grid;
+        grid-template-columns: 25% 25% 25% 25%;
+        grid-template-rows: [row1-start] auto [row2-start] auto [row2-end];
+      }
+
+      .card {
+        background-color: rgb(233, 78, 119);
+        border-radius: 5px;
+        margin: 10px;
+        padding: 10px 20px;
+        text-align: center;
+      }
+
+      .card.card1 {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 2;
+      }
+
+      .card.card3 {
+        grid-column: 4;
+        grid-row: row1-start / row2-end;
+        height: 800px;
+      }
+
+      .card.card5 {
+        grid-column-start: 2;
+        grid-column-end: 4;
+        grid-row-start: 2;
+        grid-row-end: 2;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="card card1">One</div>
+      <div class="card card2">Two</div>
+      <div class="card card3">Three</div>
+      <div class="card card4">Four</div>
+      <div class="card card5">Five</div>
+    </div>
+  </body>
+</html>
